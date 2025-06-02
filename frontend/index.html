@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br" ng-app="todoApp">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/x-icon" href="/favicon.svg">
+  <title>MultiTarefas</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.4/moment.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+
+  <script src="app/app.module.js"></script>
+  <script src="app/app.routes.js"></script>
+  <script src="app/services/login.service.js"></script>
+  <script src="app/services/register.service.js"></script>
+  <script src="app/services/task.service.js"></script>
+  <script src="app/controllers/login.controller.js"></script>
+  <script src="app/controllers/task.controller.js"></script>
+  <script src="app/controllers/register.controller.js"></script>
+  <script src="app/components/Task/editTaskModal.component.js"></script>
+  <script src="app/components/Task/createTaskModal.component.js"></script>
+
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <div ng-view></div>
+</body>
+</html>
