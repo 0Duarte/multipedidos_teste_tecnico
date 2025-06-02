@@ -1,0 +1,24 @@
+<div class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-40 z-50">
+    <div class="bg-white rounded-xl shadow-lg p-8 w-full max-w-md relative">
+        <button ng-click="$ctrl.onClose()"
+            class="absolute top-2 right-2 text-gray-400 hover:text-red-500 text-2xl font-bold"
+            aria-label="Fechar">&times;</button>
+        <h3 class="text-xl font-bold text-blue-700 mb-4">Adicionar Tarefa</h3>
+        <form ng-submit="$ctrl.onCreate()" autocomplete="off">
+            <input type="text" ng-model="$ctrl.task.title" placeholder="Título" required
+                class="w-full mb-3 px-4 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+            <textarea ng-model="$ctrl.task.description" placeholder="Descrição" required
+                class="w-full mb-3 px-4 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition"
+                rows="3"></textarea>
+            <input type="date" ng-model="$ctrl.task.due_date" required
+                class="w-full mb-4 px-4 py-2 border border-blue-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition" />
+            <button type="submit"
+                class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold px-4 py-2 rounded-lg shadow transition">
+                Criar
+            </button>
+        </form>
+        <ul ng-if="$ctrl.errors.length" class="mb-4 text-red-600 text-sm">
+            <li ng-repeat="err in $ctrl.errors track by $index">{{ err }}</li>
+        </ul>
+    </div>
+</div>
