@@ -19,7 +19,7 @@ services:
       - DB_DATABASE=laravel
       - DB_USERNAME=laravel
       - DB_PASSWORD=secret
-
+    command: bash -c "composer install && php artisan serve --host=0.0.0.0 --port=8000"
   mysql:
     image: mysql:8.0
     container_name: mysql_db
